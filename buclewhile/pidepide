@@ -1,0 +1,11 @@
+import os
+os.system('cls')
+n=0
+i=0
+while i>=0:
+    i=int(input('ingrese i'))
+    if i<0:
+        break
+    n+=i
+
+print(n)

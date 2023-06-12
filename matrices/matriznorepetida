@@ -1,0 +1,27 @@
+import os
+import random
+os.system('cls')
+
+mat = []
+nuf = 3
+nuc = 3
+rep = []
+
+for i in range(nuf):
+    fil = []
+    for j in range(nuc):
+        n = random.randint(1,nuf*nuc)
+        while n in rep:
+            n = random.randint(1,nuf*nuc)
+        fil.append(n)
+        rep.append(n)
+    mat.append(fil)
+
+print("---matriz---")
+for i in range(len(mat)):
+    for j in range(len(mat[i])):
+        val = mat[i][j]
+        print("%5d" % val, end="")
+    print()
+
+print(rep)

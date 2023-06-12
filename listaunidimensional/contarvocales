@@ -1,0 +1,17 @@
+import os
+import re
+
+os.system('cls')
+par = 0
+imp = 0
+pal = input('\nIngrese texto: \n')
+pal = ''.join(e for e in pal if e.isalpha())
+patron = "[aeiouAEIOUáéíóúÁÉÍÓÚ]"
+palvec = list(pal)
+for e in palvec:
+    if re.fullmatch(patron, e):
+        par += 1
+    else:
+        imp += 1
+print("\n\n\npares:", par)
+print("\nimpares:", imp)
